@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: livsauze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/08 16:21:43 by livsauze         ###   ########.fr       */
+/*   Created: 2023/10/02 15:26:41 by livsauze          #+#    #+#             */
+/*   Updated: 2023/10/02 16:25:30 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#include "libft.h"
 
-# include "../minilibx-linux/mlx.h"
-# include <libft.h>
-# include <limits.h>
-# include <stdlib.h>
-
-
-#endif
+int	ft_isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
+}

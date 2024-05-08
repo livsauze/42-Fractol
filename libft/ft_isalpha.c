@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: livsauze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/08 16:21:43 by livsauze         ###   ########.fr       */
+/*   Created: 2023/10/02 14:32:53 by livsauze          #+#    #+#             */
+/*   Updated: 2023/10/03 10:33:53 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#include "libft.h"
 
-# include "../minilibx-linux/mlx.h"
-# include <libft.h>
-# include <limits.h>
-# include <stdlib.h>
-
-
-#endif
+int	ft_isalpha(int c)
+{
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
+}

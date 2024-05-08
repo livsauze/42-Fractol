@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.h                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/08 16:21:43 by livsauze         ###   ########.fr       */
+/*   Created: 2023/10/25 16:22:10 by livsauze          #+#    #+#             */
+/*   Updated: 2023/10/25 18:27:49 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRACTOL_H
-# define FRACTOL_H
+#include "libft.h"
 
-# include "../minilibx-linux/mlx.h"
-# include <libft.h>
-# include <limits.h>
-# include <stdlib.h>
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	int	size;
 
-
-#endif
+	size = ft_lstsize(lst);
+	while (size > 0)
+	{
+		(*f)(lst->content);
+		lst = lst->next;
+		size--;
+	}
+}

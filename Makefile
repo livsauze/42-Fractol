@@ -6,7 +6,7 @@
 #    By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:22:34 by livsauze          #+#    #+#              #
-#    Updated: 2024/05/07 12:25:11 by livsauze         ###   ########.fr        #
+#    Updated: 2024/05/08 16:21:01 by livsauze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,16 @@ LINK = -Llibft -lft -lXext -lX11 -lm
 
 MLX_PATH = minilibx-linux/
 MLX_NAME = libmlx.a
-MLX = ${MLX_PATH} ${MLX_NAME}
+MLX = ${MLX_PATH}${MLX_NAME}
 INC =	-I ./include/\
 		-I ./libft/\
-		-I ./minilibx-linux/\
+		# -I ./minilibx-linux/\
 
 CC = cc
-CFLAGS = Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -g
 
 UTILS =
-SRCS = ${UTILS}
+SRCS = ${UTILS} src/main.c
 OBJS = ${SRCS:.c=.o}
 
 %.o : %.c
@@ -40,7 +40,7 @@ all : ${NAME}
 clean :
 		rm -f ${OBJS}
 		make clean -C libft/
-		make -C ${MLX} clean
+		make -C ${MLX_PATH} clean
 
 
 fclean : clean
