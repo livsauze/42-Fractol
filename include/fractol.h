@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/08 16:21:43 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:41:54 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,23 @@
 
 # include "../minilibx-linux/mlx.h"
 # include <libft.h>
-# include <limits.h>
 # include <stdlib.h>
 
+# define MANDELBROT 1
+# define JULIA 2
+
+typedef struct s_fractol
+{
+	void	*mlx;
+	void	*window;
+	void	*img;
+	int		set;
+}			t_fractol;
+
+/***************************ERRORS*******************************/
+void	ft_handle_errors(int ac, char **av, t_fractol *f);
+void	ft_msg(t_fractol *f);
+/************************INITIALISATION**************************/
+void	ft_init(t_fractol	*f);
 
 #endif

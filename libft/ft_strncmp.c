@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livsauze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 16:12:48 by livsauze          #+#    #+#             */
-/*   Updated: 2023/10/05 08:36:59 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/09 18:39:13 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-/*
-int	main()
-{
-	printf("%d", ft_strncmp("atoms\0\0\0\0", "atoms\0abc", 6));
-	return (0);
-}*/

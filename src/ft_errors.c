@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_errors.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/07 12:30:51 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/09 18:35:05 by livsauze         ###   ########.fr       */
+/*   Created: 2024/05/09 18:08:21 by livsauze          #+#    #+#             */
+/*   Updated: 2024/05/09 18:25:48 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/fractol.h"
+#include "../include/fractal.c"
 
-int	main(int ac, char **av)
+void	ft_handle_errors(int ac, char **av, t_fractol *f)
 {
-	t_fractol	f;
-	
-	ft_handle_errors(ac, av, &f);
-	ft_get_fractal(av, &f);
-	ft_init(&f);
-	mlx_connection = mlx_init();
-	window = mlx_new_window(mlx_connection, 400, 400, "Window");
-	mlx_loop(mlx_connection);
-	mlx_destroy_display(mlx_connection);
-	free(mlx_connection);
+	if (ac < 2)
+		ft_msg(&f);
+}
+
+void	ft_msg(t_fractol *f)
+{
+	ft_printf("You need to choose a fractal between :\n")
 }
