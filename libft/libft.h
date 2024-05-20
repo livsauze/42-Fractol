@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 14:26:34 by livsauze          #+#    #+#             */
-/*   Updated: 2023/10/25 19:19:22 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/03/21 12:29:27 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <stddef.h>
+# include "ft_printf.h"
 
 typedef struct s_list
 {

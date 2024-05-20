@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 12:33:03 by livsauze          #+#    #+#             */
-/*   Updated: 2023/10/28 11:09:28 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/02/23 22:32:03 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	len;
 
 	len = nmemb * size;
-	//if ((len / nmemb) != size)
-	//return (NULL);
 	s = (void *)malloc(len);
 	if (s == NULL)
 		return (NULL);

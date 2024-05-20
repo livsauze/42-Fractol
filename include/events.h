@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   events.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/08 11:50:52 by livsauze          #+#    #+#             */
-/*   Updated: 2024/03/23 15:31:27 by livsauze         ###   ########.fr       */
+/*   Created: 2024/05/11 13:03:17 by livsauze          #+#    #+#             */
+/*   Updated: 2024/05/20 15:36:47 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef EVENTS_H
+# define EVENTS_H
 
-char	*ft_strdup(const char *s)
-{
-	char	*cpy;
-	size_t	len;
-	size_t	i;
+# define ESC 65307
 
-	len = ft_strlen(s);
-	cpy = (char *)malloc(len * sizeof(char) + 1);
-	i = 0;
-	if (cpy == NULL)
-		return (NULL);
-	else
-	{
-		while (s[i])
-		{
-			cpy[i] = s[i];
-			i++;
-		}
-		cpy[i] = '\0';
-	}
-	return (cpy);
-}
+# endif

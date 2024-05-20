@@ -6,7 +6,7 @@
 #    By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:22:34 by livsauze          #+#    #+#              #
-#    Updated: 2024/05/08 16:21:01 by livsauze         ###   ########.fr        #
+#    Updated: 2024/05/20 15:51:55 by livsauze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,13 +19,13 @@ MLX_NAME = libmlx.a
 MLX = ${MLX_PATH}${MLX_NAME}
 INC =	-I ./include/\
 		-I ./libft/\
-		# -I ./minilibx-linux/\
+		#-I ./minilibx-linux/\
 
-CC = cc
+CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g
 
-UTILS =
-SRCS = ${UTILS} src/main.c
+UTILS = utils/ft_exit.c 
+SRCS = ${UTILS} src/main.c src/ft_errors.c src/ft_events.c src/ft_init.c
 OBJS = ${SRCS:.c=.o}
 
 %.o : %.c

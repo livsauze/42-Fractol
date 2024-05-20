@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: livsauze <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 14:04:00 by livsauze          #+#    #+#             */
-/*   Updated: 2023/10/11 14:18:40 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/03/23 15:36:18 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	newstr[i] = '\0';
-	return (newstr);
+	return (free((char *)s1), newstr);
 }
 /*
 int	main(void)
