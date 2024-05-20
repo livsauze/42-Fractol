@@ -6,11 +6,20 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 18:00:06 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/20 17:03:30 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/20 19:02:44 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fractol.h"
+
+void	ft_data_init(t_fractol *f)
+{
+	if (f->set == 1)
+	{
+		f->escape_val = 4;
+		f->iter = 42;
+	}
+}
 
 void	ft_init(t_fractol *f)
 {
@@ -30,6 +39,7 @@ void	ft_init(t_fractol *f)
 	f->img = mlx_new_image(f->mlx, WIDTH, HEIGHT);
 	if (!f->img)
 		ft_exit(EXIT_FAILURE, f);
+	ft_data_init(f);
 }
 
 void	ft_get_fractal(char **av, int ac, t_fractol *f)

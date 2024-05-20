@@ -6,7 +6,7 @@
 #    By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:22:34 by livsauze          #+#    #+#              #
-#    Updated: 2024/05/20 15:51:55 by livsauze         ###   ########.fr        #
+#    Updated: 2024/05/20 19:12:22 by livsauze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,9 @@ INC =	-I ./include/\
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g
 
-UTILS = utils/ft_exit.c 
-SRCS = ${UTILS} src/main.c src/ft_errors.c src/ft_events.c src/ft_init.c
+UTILS = utils/ft_exit.c utils/ft_maths.c
+SRCS = ${UTILS} src/main.c src/ft_errors.c src/ft_events.c src/ft_init.c \
+		src/ft_render.c
 OBJS = ${SRCS:.c=.o}
 
 %.o : %.c
