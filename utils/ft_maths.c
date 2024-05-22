@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 18:43:43 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/20 18:58:14 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:21:21 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,9 @@ t_complex	ft_square(t_complex z)
 	res.y = 2 * z.x *z.y;
 	return (res);
 }
+
+// double	ft_atodbl(char *str)
+// {
+// 	double	result;
+// 	double	
+// }

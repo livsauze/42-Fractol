@@ -6,11 +6,19 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 18:00:06 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/20 19:02:44 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:32:45 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/fractol.h"
+
+void	ft_clean_init(t_fractol *f)
+{
+	f->mlx = NULL;
+	f->window = NULL;
+	f->img.img_ptr = NULL;
+	f->name = NULL;
+}
 
 void	ft_data_init(t_fractol *f)
 {
@@ -19,6 +27,10 @@ void	ft_data_init(t_fractol *f)
 		f->escape_val = 4;
 		f->iter = 42;
 	}
+	// else if (f->set == 2)
+	// {
+		
+	// }
 }
 
 void	ft_init(t_fractol *f)
@@ -36,27 +48,10 @@ void	ft_init(t_fractol *f)
 	f->window = mlx_new_window(f->mlx,WIDTH, HEIGHT, f->name);
 	if (!f->window)
 		ft_exit(EXIT_FAILURE, f);
-	f->img = mlx_new_image(f->mlx, WIDTH, HEIGHT);
-	if (!f->img)
+	f->img.img_ptr = mlx_new_image(f->mlx, WIDTH, HEIGHT);
+	if (!f->img.img_ptr)
 		ft_exit(EXIT_FAILURE, f);
+	f->img.pixels = mlx_get_data_addr(f->img.img_ptr, &f->img.bpp, &f->img.line_len, &f->img.endian);
 	ft_data_init(f);
 }
 
-void	ft_get_fractal(char **av, int ac, t_fractol *f)
-{
-	if (ft_strncmp(av[1], "mandelbrot", ft_strlen(av[1]) + 1) == 0)
-		f->set = MANDELBROT;
-	else if (ft_strncmp(av[1], "julia", ft_strlen(av[1]) + 1) == 0)
-		f->set = JULIA;
-	else if (f->set == JULIA && ac < 5)
-	{
-		ft_printf("Please enter starting values between -2.0 and 2.0\n");
-		ft_printf("Try something like : ./fractol julia 0.8 0.01\n");
-		ft_exit(EXIT_FAILURE, f);
-	}
-	else
-	{
-		ft_msg(f);
-		ft_exit(EXIT_FAILURE, f);
-	}
-}

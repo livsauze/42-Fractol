@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:30:51 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/20 18:35:50 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:30:08 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	main(int ac, char **av)
 {
 	t_fractol	f;
 	
+	ft_clean_init(&f);
 	ft_handle_errors(ac, av, &f);
 	ft_init(&f);
 	ft_render(&f);

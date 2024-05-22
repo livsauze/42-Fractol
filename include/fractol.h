@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/20 19:13:27 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/05/22 15:32:58 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,33 @@
 # define BLUE 0x0000FF
 # define GREEN 0x00FF00
 
-typedef struct s_fractol
+typedef struct s_img
 {
-	void	*mlx;
-	void	*window;
-	void	*img;
-	char	*name;
-	int		set;
-	double	escape_val;
-	int		iter;
-}			t_fractol;
+	void	*img_ptr;
+	char	*pixels;
+	int		bpp; //bytes per pixel
+	int		endian;
+	int		line_len;
+}			t_img;
 
 typedef struct s_complex
 {
 	double	x; //Real nb
 	double	y; //Imaginary nb
-}			t_complex
+}			t_complex;
+
+typedef struct s_fractol
+{
+	void	*mlx;
+	void	*window;
+	char	*name;
+	int		set;
+	t_img	img;
+	double	escape_val;
+	int		iter;
+	double	julia_x;
+	double	julia_y;
+}			t_fractol;
 
 /* **********************************ERRORS********************************** */
 void	ft_handle_errors(int ac, char **av, t_fractol *f);
@@ -54,13 +65,14 @@ void	ft_msg(t_fractol *f);
 
 /* ******************************INITIALISATION****************************** */
 void	ft_init(t_fractol	*f);
+void	ft_clean_init(t_fractol *f);
 void	ft_data_init(t_fractol *f);
 void	ft_get_fractal(char **av, int ac, t_fractol *f);
 
 /* **********************************RENDER********************************** */
 void	ft_render(t_fractol *f);
 void	ft_handle_pixel(int x, int y, t_fractol *f);
-void	ft_put_pixel(int x, int y, .....);
+void	ft_put_pixel(int x, int y, t_img *img, int color);
 
 /* **********************************EVENTS********************************** */
 int		ft_key_events(int keycode, t_fractol *mlx);
