@@ -6,7 +6,7 @@
 #    By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:22:34 by livsauze          #+#    #+#              #
-#    Updated: 2024/05/20 19:12:22 by livsauze         ###   ########.fr        #
+#    Updated: 2024/05/28 16:42:07 by livsauze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ clean :
 
 
 fclean : clean
+		make fclean -C libft/
 		rm -f ${NAME}
 
 re : fclean all
