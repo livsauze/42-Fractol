@@ -6,7 +6,7 @@
 #    By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 15:22:34 by livsauze          #+#    #+#              #
-#    Updated: 2024/05/28 16:42:07 by livsauze         ###   ########.fr        #
+#    Updated: 2024/06/01 13:03:23 by livsauze         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ INC =	-I ./include/\
 		#-I ./minilibx-linux/\
 
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -O3
 
 UTILS = utils/ft_exit.c utils/ft_maths.c
 SRCS = ${UTILS} src/main.c src/ft_errors.c src/ft_events.c src/ft_init.c \

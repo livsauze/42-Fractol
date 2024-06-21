@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 18:40:13 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/28 15:29:19 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/06/21 17:55:53 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	ft_handle_pixel(int x, int y, t_fractol *f)
 	int			color_b;
 
 	i = 0;
-	z.x = (ft_map(x, -2, 2, WIDTH) * f->zoom) + f->shift_x;
-	z.y = (ft_map(y, 2, -2, HEIGHT) * f->zoom) + f->shift_y;
+	z.x = (ft_map(x, -2, +2, WIDTH) * f->zoom) + f->shift_x;
+	z.y = (ft_map(y, +2, -2, HEIGHT) * f->zoom) + f->shift_y;
 	ft_set_fractal(&z, &c, f);
 	while (i < f->iter)
 	{

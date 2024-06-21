@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 12:56:04 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/28 15:55:13 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/06/01 12:42:54 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,9 @@ int	ft_mouse_events(int keycode, int x, int y, t_fractol *f)
 	(void)x;
 	(void)y;
 	if (keycode == ZOOM_IN)
-		f->zoom *= 0.97;
+		f->zoom *= 0.95;
 	else if (keycode == ZOOM_OUT)
-		f->zoom *= 1.03;
+		f->zoom *= 1.05;
 	ft_render(f);
 	return (0);
 }

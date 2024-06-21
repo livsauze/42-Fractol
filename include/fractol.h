@@ -6,7 +6,7 @@
 /*   By: livsauze <livsauze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/07 12:31:10 by livsauze          #+#    #+#             */
-/*   Updated: 2024/05/28 16:25:34 by livsauze         ###   ########.fr       */
+/*   Updated: 2024/06/21 18:37:26 by livsauze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@
 # define MANDELBROT 1
 # define JULIA 2
 
-# define HEIGHT 1500
-# define WIDTH 1500
+# define HEIGHT 800
+# define WIDTH 800
 
 typedef struct s_img
 {
@@ -86,7 +86,6 @@ int			ft_clean_exit(t_fractol	*f);
 
 /* **********************************UTILS*********************************** */
 double		ft_map(double n, double n_min, double n_max, double o_max);
-double		ft_atodbl(char *str);
 t_complex	ft_sum(t_complex z1, t_complex z2);
 t_complex	ft_square(t_complex z);
 
