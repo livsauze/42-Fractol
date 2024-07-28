@@ -11,7 +11,7 @@ For the mandatory part, you need to implement two fractals : mandelbrot and juli
 Using a "simple" mathematic equation, you will create some beautiful psychedelic effects. 
 
 To get started, you can look at complex numbers and at the following equation : 
-<img src="mandelbrot set" alt="mandelbrot set">
+<img src="mandelbrot set.jpeg" alt="mandelbrot set">
 
 ## BONUS PART
 
