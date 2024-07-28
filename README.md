@@ -2,9 +2,9 @@
 <div class="row">
   <div classs="column" align="left">
    <img src="img/mandelbrot_set.png" alt="mandelbrot_set" width="400">
-    <div classs="column" align="right">
-      <img src="img/julia_set.png" alt="julia_set" width="400">
-    </div>
+  </div>
+  <div classs="column" align="right">
+   <img src="img/julia_set.png" alt="julia_set" width="400">
   </div>
 </div>
 
