@@ -1,9 +1,9 @@
 # 👉 FRACTOL : A 42 PROJECT👈
 <div class="row">
-  <div classs="column">
+  <div classs="column" aling="left">
    <img src="img/mandelbrot_set.png" alt="mandelbrot_set" width="600">
   </div>
-  <div classs="column">
+  <div classs="column" align="right">
    <img src="img/julia_set.png" alt="julia_set" width="600">
   </div>
 </div>
