@@ -1,10 +1,10 @@
 # 👉 FRACTOL : A 42 PROJECT👈
 
 <p align="left">
- <img src="img/mandelbrot_set.png" alt="mandelbrot_set">
+ <img src="img/mandelbrot_set.png" alt="mandelbrot_set" width="200">
 </p>
 <p align="right">
-  <img src="img/julia_set.png" alt="julia_set">
+  <img src="img/julia_set.png" alt="julia_set" width="200">
 </p>
 
 ## GRADE
