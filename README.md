@@ -1,5 +1,12 @@
 # 👉 FRACTOL : A 42 PROJECT👈
 
+<p align="left">
+ <img src="img/mandelbrot.jpeg" alt="mandelbrot_set">
+</p>
+<p align="right">
+  <img src="img/julia.jpeg" alt="julia_set">
+</p>
+
 ## GRADE
 ✅ 115 %
 
@@ -11,8 +18,10 @@ For the mandatory part, you need to implement two fractals : mandelbrot and juli
 Using a "simple" mathematic equation, you will create some beautiful psychedelic effects. 
 
 To get started, you can look at complex numbers and at the following equation : 
-![mandelbrot set](https://github.com/user-attachments/assets/593965cf-06e8-4fc0-bbd1-22259222a4d8)
-
+<p align=left>
+ <img src="img/mandelbrot_eq.jpeg" alt="mandelbrot_eq">
+</p>
+ 
 ## COMMANDS
 
 | KEYS | DESCRIPTION |
