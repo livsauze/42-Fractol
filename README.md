@@ -1,7 +1,7 @@
 # 👉 FRACTOL : A 42 PROJECT👈
 
 <p align="left">
- <img src="img/mandelbrot_set.png" alt="mandelbrot_set" width="800">
+ <img src="img/mandelbrot_set.png" alt="mandelbrot_set" width="600">
 <p align="right">
   <img src="img/julia_set.png" alt="julia_set" width="600">
 </p>
