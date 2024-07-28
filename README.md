@@ -1,10 +1,10 @@
 # 👉 FRACTOL : A 42 PROJECT👈
 
 <p align="left">
- <img src="img/mandelbrot.jpeg" alt="mandelbrot_set">
+ <img src="img/mandelbrot_set.png" alt="mandelbrot_set">
 </p>
 <p align="right">
-  <img src="img/julia.jpeg" alt="julia_set">
+  <img src="img/julia_set.png" alt="julia_set">
 </p>
 
 ## GRADE
@@ -19,7 +19,7 @@ Using a "simple" mathematic equation, you will create some beautiful psychedelic
 
 To get started, you can look at complex numbers and at the following equation : 
 <p align=left>
- <img src="img/mandelbrot_eq.jpeg" alt="mandelbrot_eq">
+ <img src="img/mandelbrot_eq.gif" alt="mandelbrot_eq">
 </p>
  
 ## COMMANDS
